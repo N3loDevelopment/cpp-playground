@@ -61,7 +61,7 @@ void removeAt(int &index)
     while (curr && i < index)
     {
         curr = curr->next;
-        index++;
+        i++;
     }
 
     if (!curr)
