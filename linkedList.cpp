@@ -50,7 +50,7 @@ void removeFromList(const std::string &val)
     }
 }
 
-void removeIndexFromList(int &index)
+void removeAt(int &index)
 {
     if (index < 0 || !head)
         return;
