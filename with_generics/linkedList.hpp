@@ -10,6 +10,7 @@ struct Node
 };
 
 template <typename T>
+
 class LinkedList
 {
 private:
@@ -18,11 +19,7 @@ private:
 
 public:
     LinkedList();
-
-    void initList();
     void addToList(T val);
-    void removeAt();
+    void removeAt(int index);
     void getList();
-
-    void initList
-}
+};
