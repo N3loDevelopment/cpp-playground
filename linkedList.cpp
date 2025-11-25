@@ -1,12 +1,6 @@
+#include "linkedList.hpp"
 #include <iostream>
 #include <string>
-
-struct Node
-{
-    std::string data;
-    Node *prev;
-    Node *next;
-};
 
 Node *head;
 Node *tail;
