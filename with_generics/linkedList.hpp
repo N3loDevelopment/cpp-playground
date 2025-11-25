@@ -20,8 +20,9 @@ public:
     LinkedList();
 
     void initList();
-    void addToList();
+    void addToList(T val);
     void removeAt();
+    void getList();
 
     void initList
 }
