@@ -56,6 +56,45 @@ void removeFromList(const std::string &val)
     }
 }
 
+void removeIndexFromList(int &index)
+{
+    if (index < 0 || !head)
+        return;
+
+    Node *curr = head;
+    int i = 0;
+
+    while (curr->next && i < index)
+    {
+        curr = curr->next;
+        index++;
+    }
+
+    if (!curr)
+        return;
+
+    if (curr == head)
+    {
+        head = curr->next;
+        if (head)
+            head->prev = nullptr;
+        else
+            tail = nullptr;
+    }
+    else if (curr == tail)
+    {
+        tail = curr->prev;
+        tail->next = nullptr;
+    }
+    else
+    {
+        curr->prev->next = curr->next;
+        curr->next->prev = curr->prev;
+    }
+
+    delete curr;
+}
+
 void getList()
 {
     Node *curr = head;
