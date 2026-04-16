@@ -1,4 +1,4 @@
-#include "receiver.cpp"
+#include "receiver.hpp"
 
 int main()
 {
@@ -15,5 +15,3 @@ int main()
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 }
-
-// netsh advfirewall firewall add rule name="API Server" dir=in action=allow protocol=TCP localport=8080

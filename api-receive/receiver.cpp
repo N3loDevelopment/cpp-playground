@@ -39,7 +39,7 @@ Server::~Server()
 
 void Server::getFiles(const std::string &filename, httplib::Response &res)
 {
-    std::ifstream file("../../uploads/" + filename, std::ios::binary);
+    std::ifstream file("../uploads/" + filename, std::ios::binary);
     if (!file)
     {
         res.status = 404;
@@ -81,7 +81,7 @@ void Server::uploadFile(const httplib::Request &req, httplib::Response &res)
         return;
     }
 
-    std::ofstream outFile("../../uploads/" + filename, std::ios::binary);
+    std::ofstream outFile("../uploads/" + filename, std::ios::binary);
     if (outFile)
     {
         outFile << req.body;
